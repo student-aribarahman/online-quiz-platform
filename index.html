@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGU Utsav 2026 - Interactive College Fest Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>CGU Utsav 2026</h1>
+    <nav>
+      <a href="#events">Events</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#register">Register</a>
+      <a href="#my-registrations">My Registrations</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Three Days. Endless Energy.</h2>
+    <p>Explore events, check the schedule and register in seconds.</p>
+  </section>
+
+  <main>
+    <section id="events">
+      <h2>Explore Events</h2>
+      <div class="filters">
+        <input type="text" id="searchBox" placeholder="Search events...">
+        <select id="categoryFilter">
+          <option value="All">All Categories</option>
+        </select>
+      </div>
+      <div id="eventGrid" class="grid"></div>
+    </section>
+
+    <section id="schedule">
+      <h2>Fest Schedule</h2>
+      <div class="tabs" id="dayTabs"></div>
+      <table>
+        <thead><tr><th>Time</th><th>Event</th><th>Venue</th></tr></thead>
+        <tbody id="scheduleBody"></tbody>
+      </table>
+    </section>
+
+    <section id="register">
+      <h2>Register for an Event</h2>
+      <div class="form-box">
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+        <label>Registration No.</label>
+        <input type="text" id="regno" placeholder="e.g. 2501090055">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="you@example.com">
+        <label>Event</label>
+        <select id="eventSelect"></select>
+        <label>Team Size</label>
+        <input type="number" id="teamSize" value="1" min="1">
+        <button id="registerBtn">Register Now</button>
+        <p id="formMsg" class="msg"></p>
+      </div>
+      <div id="ticket"></div>
+    </section>
+
+    <section id="my-registrations">
+      <h2>My Registrations</h2>
+      <div id="myList"></div>
+    </section>
+  </main>
+
+  <footer>&copy; 2026 CGU Utsav | Case Study Project</footer>
+  <script src="script.js"></script>
+</body>
+</html>

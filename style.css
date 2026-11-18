@@ -1,0 +1,171 @@
+:root {
+  --primary: #5b21b6;
+  --accent: #f59e0b;
+  --bg: #f5f3ff;
+  --text: #1f2937;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Header and hero banner */
+.site-header {
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header nav a {
+  color: #fff;
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.site-header nav a:hover { color: var(--accent); }
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0;
+  color: #fff;
+  background: linear-gradient(135deg, #5b21b6, #db2777);
+}
+.hero h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  border: none;
+  padding: 0;
+}
+
+/* Layout and section headings */
+main { max-width: 1000px; margin: auto; padding: 20px; }
+section { margin: 30px 0; }
+section h2 {
+  color: var(--primary);
+  margin-bottom: 14px;
+  border-left: 5px solid var(--accent);
+  padding-left: 10px;
+}
+
+/* Filters and event cards */
+.filters { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+input, select {
+  padding: 9px;
+  border: 1px solid #c4b5fd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+}
+.card h3 { color: var(--primary); }
+.badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: .75rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+.card button, .form-box button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.card button:hover, .form-box button:hover { background: #4c1d95; }
+.card button:disabled { background: #9ca3af; cursor: not-allowed; }
+
+/* Schedule tabs and table */
+.tabs button {
+  padding: 8px 16px;
+  margin-right: 6px;
+  border: 1px solid var(--primary);
+  background: #fff;
+  color: var(--primary);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tabs button.active { background: var(--primary); color: #fff; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 12px;
+}
+th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+th { background: var(--primary); color: #fff; }
+
+/* Registration form and dynamic ticket */
+.form-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 480px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+}
+.form-box label { display: block; margin-top: 10px; font-weight: bold; }
+.form-box input, .form-box select { width: 100%; }
+.msg { margin-top: 10px; font-weight: bold; }
+.msg.error { color: #dc2626; }
+.msg.ok { color: #15803d; }
+.ticket {
+  margin-top: 20px;
+  background: #fff;
+  border: 2px dashed var(--primary);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 480px;
+}
+.ticket h3 { color: var(--primary); margin-bottom: 8px; }
+.ticket .rid {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #db2777;
+  letter-spacing: 1px;
+}
+.ticket p { margin: 4px 0; }
+
+/* My registrations and footer */
+.reg-item {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+  .site-header { flex-direction: column; }
+  .hero h2 { font-size: 1.6rem; }
+}
